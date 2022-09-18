@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  faculdade_db:
+    image: postgres
+    container_name: faculdade_db
+    environment:
+      POSTGRES_USER: geek
+      POSTGRES_PASSWORD: university
+      POSTGRES_DB: faculdade
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data 
